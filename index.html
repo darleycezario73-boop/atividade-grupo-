@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop App</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">Shop App</div>
+
+  <input type="text" class="search" placeholder="Pesquisar produtos...">
+
+  <div class="menu">
+    <a href="#">Início</a>
+    <a href="#">Login</a>
+    <a href="#">Pedidos</a>
+    <a href="#">Contato</a>
+  </div>
+
+</header>
+
+<h2 class="titulo">Produtos</h2>
+
+<section class="produtos">
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1592750475338-74b7b21085ab">
+    <div class="info">
+      <h3>iPhone Pro</h3>
+      <div class="preco">R$ 4999</div>
+      <button onclick="adicionar('iPhone Pro',4999)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302">
+    <div class="info">
+      <h3>Notebook Gamer</h3>
+      <div class="preco">R$ 5499</div>
+      <button onclick="adicionar('Notebook Gamer',5499)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e">
+    <div class="info">
+      <h3>Headphone</h3>
+      <div class="preco">R$ 399</div>
+      <button onclick="adicionar('Headphone',399)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12">
+    <div class="info">
+      <h3>Smartwatch</h3>
+      <div class="preco">R$ 799</div>
+      <button onclick="adicionar('Smartwatch',799)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab">
+    <div class="info">
+      <h3>Camiseta branca</h3>
+      <div class="preco">R$ 129</div>
+      <button onclick="adicionar('Camiseta branca',129)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3">
+    <div class="info">
+      <h3>ps5</h3>
+      <div class="preco">R$ 299</div>
+      <button onclick="adicionar('ps5',299)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+    <div class="info">
+      <h3>cama</h3>
+      <div class="preco">R$ 1899</div>
+      <button onclick="adicionar('Cama',1899)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://www.bing.com/th?id=OPHS.eCWlxVI6fi6Wrw474C474&o=5&pid=21.1&w=128&h=128&qlt=100&dpr=1&o=2&bw=6&bc=FFFFFF">
+    <div class="info">
+      <h3>Macbook Pro</h3>
+      <div class="preco">R$ 8999</div>
+      <button onclick="adicionar('Macbook Pro',8999)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1621259182978-fbf93132d53d">
+    <div class="info">
+      <h3>xbox</h3>
+      <div class="preco">R$ 4299</div>
+      <button onclick="adicionar('xbox',4299)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff">
+    <div class="info">
+      <h3>Tênis Nike</h3>
+      <div class="preco">R$ 499</div>
+      <button onclick="adicionar('Tênis Nke',499)">
+        Adicionar ao Carrinho
+      </button>
+    </div>
+  </div>
+
+</section>
+
+<div id="carrinho" class="carrinho">
+
+  <h2>🛒 Carrinho</h2>
+
+  <ul id="lista-carrinho"></ul>
+
+  <p>
+    Total: R$ <span id="total">0</span>
+  </p>
+
+  <button class="finalizar" onclick="finalizar()">
+    Finalizar Compra
+  </button>
+
+  <button onclick="fecharCarrinho()">
+    Fechar
+  </button>
+
+</div>
+
+<div class="cart-float" onclick="abrirCarrinho()">
+  🛒
+  <div class="cart-count" id="contador">0</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
